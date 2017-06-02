@@ -7,12 +7,15 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 /**
  * correlates the anchor of Journals to the order number
  * @author Eike Spielberg
  *
  */
 @Entity
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class AnchorOrder {
 	
 	@Id

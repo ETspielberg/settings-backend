@@ -5,7 +5,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
 @CrossOrigin
-@RepositoryRestResource(collectionResourceRel = "anchororder", path = "anchororder")
-public interface AnchorOrderRepository  extends PagingAndSortingRepository<AnchorOrder, Long> {
+@RepositoryRestResource(collectionResourceRel = "sushiprovider", path = "sushiprovider")
+public interface SushiproviderRepository  extends PagingAndSortingRepository<Sushiprovider, Long> {
 
 }

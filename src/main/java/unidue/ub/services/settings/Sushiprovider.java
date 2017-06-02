@@ -4,12 +4,15 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 /**
  * Plain Old Java Object as representation of a SUSHI provider with all the necessary data to retrieve the reports.
  * @author Eike Spielberg
  *
  */
 @Entity
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Sushiprovider {
     
     @Id

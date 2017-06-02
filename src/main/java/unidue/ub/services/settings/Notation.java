@@ -1,9 +1,11 @@
 package unidue.ub.services.settings;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Lob;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
  * Plain old java object holding a notation and the corresponding description.
@@ -12,6 +14,7 @@ import javax.persistence.Lob;
  * @version 1
  */
 @Entity
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Notation {
 	
 	@Id
@@ -19,7 +22,7 @@ public class Notation {
 	private Long id;
 
 	// char fields for description and notation
-	@Lob
+	@Column(columnDefinition = "TEXT")
 	private String description;
 
 	private String notation;

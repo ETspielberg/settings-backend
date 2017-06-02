@@ -11,6 +11,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 /**
  * Plain old java object holding the collection of places and the corresponding map file name.
  * 
@@ -19,6 +21,7 @@ import javax.persistence.Id;
  *
  */
 @Entity
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Collection {
     
     @Id
