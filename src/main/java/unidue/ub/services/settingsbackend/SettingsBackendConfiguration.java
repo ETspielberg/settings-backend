@@ -16,6 +16,6 @@ public class SettingsBackendConfiguration extends RepositoryRestConfigurerAdapte
         config.getCorsRegistry()
                 .addMapping("/**")
                 .allowedOrigins("http://localhost:3000").allowedMethods("GET", "PUT", "DELETE", "POST");
-        config.exposeIdsFor(Alertcontrol.class,AnchorOrder.class,Collection.class,Notationgroup.class,Notation.class,Stockcontrol.class,StockcontrolUser.class,Usersettings.class,Sushiprovider.class);
+        config.exposeIdsFor(Alertcontrol.class,AnchorOrder.class,Collection.class,Notationgroup.class,Notation.class,Stockcontrol.class,StockcontrolUser.class,Usersettings.class,Sushiprovider.class,UserCategory.class,UserGroup.class,ItemCategory.class,ItemGroup.class);
     }
 }
