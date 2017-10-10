@@ -11,7 +11,7 @@ import java.util.List;
 
 @CrossOrigin
 @RepositoryRestResource(collectionResourceRel = "sushiprovider", path = "sushiprovider")
-public interface SushiproviderRepository  extends PagingAndSortingRepository<Sushiprovider, Long> {
+public interface SushiproviderRepository  extends PagingAndSortingRepository<Sushiprovider, String> {
 
     public ResponseEntity<Sushiprovider> save(@RequestBody List<Sushiprovider> sushiproviders);
 
