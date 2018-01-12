@@ -10,7 +10,6 @@ import unidue.ub.settings.fachref.*;
  * Created by Eike on 26.06.2017.
  */
 @Configuration
-@EnableRedisHttpSession
 public class SettingsBackendConfiguration extends RepositoryRestConfigurerAdapter {
 
     @Override
