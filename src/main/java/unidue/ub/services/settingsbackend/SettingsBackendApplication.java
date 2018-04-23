@@ -23,8 +23,8 @@ public class SettingsBackendApplication extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.httpBasic().disable().csrf()
-				.disable();
-				//.csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse());
+				//.disable();
+				.csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse());
 		http.authorizeRequests()
 				.anyRequest().hasIpAddress("::1").anyRequest().permitAll().and()
 			.authorizeRequests()
