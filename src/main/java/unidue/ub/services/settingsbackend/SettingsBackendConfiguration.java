@@ -14,6 +14,6 @@ public class SettingsBackendConfiguration extends RepositoryRestConfigurerAdapte
 
     @Override
     public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config) {
-        config.exposeIdsFor(Alertcontrol.class,AnchorOrder.class,Collection.class,Notationgroup.class,Notation.class,Stockcontrol.class,ProfilesPerUser.class,Usersettings.class,Sushiprovider.class,UserCategory.class,UserGroup.class,ItemCategory.class,ItemGroup.class);
+        config.exposeIdsFor(Alertcontrol.class,AnchorOrder.class,Collection.class,Notationgroup.class,Notation.class,Stockcontrol.class,ProfilesPerUser.class,Usersettings.class,Sushiprovider.class,UserCategory.class,UserGroup.class,ItemCategory.class,ItemGroup.class,EbsModel.class);
     }
 }
