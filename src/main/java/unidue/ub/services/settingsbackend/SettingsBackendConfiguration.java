@@ -3,7 +3,6 @@ package unidue.ub.services.settingsbackend;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurerAdapter;
-import org.springframework.session.data.redis.config.annotation.web.http.EnableRedisHttpSession;
 import unidue.ub.settings.fachref.*;
 
 /**

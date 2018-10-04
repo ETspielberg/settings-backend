@@ -1,4 +1,4 @@
-package unidue.ub.services.settingsbackend;
+package unidue.ub.services.settingsbackend.repositories;
 
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.repository.query.Param;

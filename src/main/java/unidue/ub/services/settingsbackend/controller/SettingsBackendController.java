@@ -1,4 +1,4 @@
-package unidue.ub.services.settingsbackend;
+package unidue.ub.services.settingsbackend.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import unidue.ub.services.settingsbackend.model.UserInformation;
+import unidue.ub.services.settingsbackend.repositories.*;
 import unidue.ub.settings.fachref.Alertcontrol;
 import unidue.ub.settings.fachref.Stockcontrol;
 import unidue.ub.settings.fachref.Sushiprovider;
@@ -70,4 +71,5 @@ public class SettingsBackendController {
         alertcontrolRepository.findAll().forEach(alertcontrols::add);
         return ResponseEntity.ok(alertcontrols);
     }
+
 }
