@@ -21,7 +21,7 @@ public class NotationController {
         this.notationRepository = notationRepository;
     }
 
-    @GetMapping("notationsForGroup/{identifier}")
+    @GetMapping("notation/ForGroup/{identifier}")
     public ResponseEntity<?> getNotationListForGroup(@PathVariable String identifier) {
         List<Notation> notations = new ArrayList<>(notationRepository.getNotationListForNotationgroup(identifier));
         return ResponseEntity.ok(notations);
