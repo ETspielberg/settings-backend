@@ -25,8 +25,7 @@ public class SettingsBackendApplication extends WebSecurityConfigurerAdapter {
 		http.httpBasic()
 				.and()
 				.authorizeRequests()
-				.anyRequest().access("hasIpAddress('::1') or isAuthenticated()")
-				.antMatchers(HttpMethod.GET, "/**").permitAll().and()
+				.antMatchers(HttpMethod.GET, "/notation/**").hasIpAddress("127.0.0.1").and()
 				.csrf().csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse());
 	}
 }
