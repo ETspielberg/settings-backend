@@ -1,5 +1,7 @@
 package unidue.ub.services.settingsbackend.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -14,6 +16,8 @@ import java.util.List;
 @Controller
 public class NotationController {
 
+    private final Logger log = LoggerFactory.getLogger(NotationController.class);
+
     private final NotationRepository notationRepository;
 
     @Autowired
@@ -21,8 +25,9 @@ public class NotationController {
         this.notationRepository = notationRepository;
     }
 
-    @GetMapping("notation/ForGroup/{identifier}")
+    @GetMapping("/notation/forGroup/{identifier}")
     public ResponseEntity<?> getNotationListForGroup(@PathVariable String identifier) {
+        log.info("querying notation group " + identifier);
         List<Notation> notations = new ArrayList<>(notationRepository.getNotationListForNotationgroup(identifier));
         return ResponseEntity.ok(notations);
     }
