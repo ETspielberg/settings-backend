@@ -17,4 +17,6 @@ public interface NotationRepository  extends PagingAndSortingRepository<Notation
     @Query(value = "SELECT n.* FROM Notation n, Notationgroup ng WHERE  ng.notationgroup_name = :identifier AND SUBSTRING(n.notation,1,3) BETWEEN ng.notations_start AND ng.notations_end" , nativeQuery = true)
     List<Notation> getNotationListForNotationgroup(@Param("identifier") String identifier);
 
+    List<Notation> findAll();
+
 }
