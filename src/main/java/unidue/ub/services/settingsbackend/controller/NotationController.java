@@ -44,6 +44,6 @@ public class NotationController {
     public ResponseEntity<?> getElisaMailForNotationgroup(@PathVariable String notationgroup) {
         log.info("requesting elisa Mail for notationgroup " + notationgroup);
         Notationgroup ng = this.notationgroupRepository.getNotationgroupByNotationgroupName(notationgroup);
-        return ResponseEntity.ok((ng.getElisaMail()));
+        return ResponseEntity.ok(ng.getElisaMail());
     }
 }
