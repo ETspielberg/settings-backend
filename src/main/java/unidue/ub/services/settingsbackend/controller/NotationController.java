@@ -20,11 +20,15 @@ public class NotationController {
 
     private final Logger log = LoggerFactory.getLogger(NotationController.class);
 
-    @Autowired
-    private NotationRepository notationRepository;
+    private final NotationRepository notationRepository;
+
+    private final NotationgroupRepository notationgroupRepository;
 
     @Autowired
-    private NotationgroupRepository notationgroupRepository;
+    public NotationController(NotationRepository notationRepository, NotationgroupRepository notationgroupRepository) {
+        this.notationRepository = notationRepository;
+        this.notationgroupRepository = notationgroupRepository;
+    }
 
     @GetMapping("/notation/forGroup/{identifier}")
     public ResponseEntity<?> getNotationListForGroup(@PathVariable String identifier) {
